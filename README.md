@@ -91,3 +91,5 @@ wait for the subgraph index to be fully synced, which may take a while.
 
 <img width="1443" alt="Screen Shot 2022-03-26 at 10 47 16 AM" src="https://user-images.githubusercontent.com/595772/160244712-ca382473-9e22-4fcb-ab63-d8ec89825991.png">
 
+add blogcms to gitignore and push.
+
