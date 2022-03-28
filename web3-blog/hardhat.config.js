@@ -1,5 +1,10 @@
 require("@nomiclabs/hardhat-waffle");
 
+// read environment variables from .env file during development
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 module.exports = {
   solidity: "0.8.4",
   defaultNetwork: "hardhat",
