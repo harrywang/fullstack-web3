@@ -50,7 +50,7 @@ export default function Home(props) {
       </div>
       <div className={container}>
         {
-          (account === ownerAddress) && posts && !posts.length && (
+          (account) && posts && !posts.length && (
             /* if the signed in user is the account owner, render a button */
             /* to create the first post */
             <button className={buttonStyle} onClick={navigate}>
