@@ -77,9 +77,9 @@ export async function getServerSideProps() {
   if (process.env.ENVIRONMENT === 'local') {
     provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545")
   } else if (process.env.ENVIRONMENT === 'testnet') {
-    provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today')
+    provider = new ethers.providers.JsonRpcProvider(process.env.MUMBAI_ALCHEMY_URL)
   } else {
-    provider = new ethers.providers.JsonRpcProvider('https://polygon-rpc.com/')
+    provider = new ethers.providers.JsonRpcProvider(process.env.MATIC_ALCHEMY_URL)
   }
 
   const contract = new ethers.Contract(contractAddress, Blog.abi, provider)
