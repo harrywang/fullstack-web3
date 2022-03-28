@@ -74,9 +74,9 @@ export async function getServerSideProps() {
   /* and render a provider based on the environment we're in */
   let provider
   provider = new ethers.providers.JsonRpcProvider()
-  if (process.env.ENVIRONMENT === 'local') {
+  if (process.env.NEXT_PUBLIC_ENVIRONMENT === 'local') {
     provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545")
-  } else if (process.env.ENVIRONMENT === 'testnet') {
+  } else if (process.env.NEXT_PUBLIC_ENVIRONMENT === 'testnet') {
     provider = new ethers.providers.JsonRpcProvider(process.env.MUMBAI_ALCHEMY_URL)
   } else {
     provider = new ethers.providers.JsonRpcProvider(process.env.MATIC_ALCHEMY_URL)

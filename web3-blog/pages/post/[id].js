@@ -64,9 +64,9 @@ export default function Post({ post }) {
 export async function getStaticPaths() {
   /* here we fetch the posts from the network */
   let provider
-  if (process.env.ENVIRONMENT === 'local') {
+  if (process.env.NEXT_PUBLIC_ENVIRONMENT === 'local') {
     provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545")
-  } else if (process.env.ENVIRONMENT === 'testnet') {
+  } else if (process.env.NEXT_PUBLIC_ENVIRONMENT === 'testnet') {
     provider = new ethers.providers.JsonRpcProvider(process.env.MUMBAI_ALCHEMY_URL)
   } else {
     provider = new ethers.providers.JsonRpcProvider(process.env.MATIC_ALCHEMY_URL)
